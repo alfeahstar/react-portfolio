@@ -1,0 +1,368 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  background: transparent;
+  
+}
+
+body{
+  background: linear-gradient(330deg, rgb(218, 114, 151), rgb(253, 255, 210));
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/*------------NavBar------------*/
+.NavBar{
+  height: 5rem;
+  width: 100vw;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  z-index: 3;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+
+.title {
+  font-size: 27px;
+  font-weight: bold;
+  color: #C75B7A;
+  margin-left: 0.5rem;
+}
+
+.icon{
+  object-fit: cover;
+  height: 4rem;
+  width: 4rem;
+}
+
+.desktopMenu{
+  display: flex;
+  justify-content: center; 
+  flex-grow: 1; 
+  margin-right: 10%;
+}
+
+
+.desktopMenuListItem {
+  margin: 0 2rem; 
+  cursor: pointer;
+  color: #C75B7A;
+  font-size: 1.3rem;
+  font-weight: bold;
+  position: relative; 
+  padding-bottom: 0.5rem; 
+  text-align: center;
+  text-decoration: none; 
+}
+
+.desktopMenuListItem::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px; 
+  background-color: #694F8E; 
+  width: 0;  
+  transition: width 0.3s ease-in-out; 
+}
+
+.desktopMenuListItem:hover {
+  color: #694F8E; 
+}
+
+.desktopMenuListItem:hover::after {
+  width: 100%;  
+}
+
+
+/*------------home------------*/
+#home{
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 90rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg{
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  z-index: -1;
+  object-fit: cover;
+  height: 75vh;
+}
+
+.homeContents{
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family:'Work Sans', sans-serif;
+}
+
+.introName{
+  color:#d8547e;
+  
+}
+
+.desc{
+  font-size: medium;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.btn{
+ 
+  width: 8.5rem;  
+  padding: 10px 10px;  
+  background: #c84372;
+  border-radius: 2rem;
+  font-size: 16px;  
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btn:hover {
+  background: #694F8E;
+  color: #fff;
+}
+
+
+
+@media screen and (max-width:480px){
+  .bg{
+    right: -20vw;
+  }
+  
+}
+
+/*------------about------------*/
+.aboutContainer{
+  position: relative;
+  background-color: #C75B7A;
+  border-radius: 15px;
+  padding: 70px;
+  margin-top: 90px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.aboutTitle{
+  color: #fff;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.aboutContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6rem;
+  font-family:'Times New Roman', Times, serif
+}
+
+.aboutPic{
+  margin-top: 2rem;
+  width: 35%;
+}
+
+.aboutItems{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  list-style: none;
+  padding: 20px;
+  background-size: 0 100%;
+  gap: 15px;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.item:hover{
+  background-size: 100% 100%;
+  background: rgb(244, 217, 208);
+  color: rgb(146, 26, 64);
+}
+
+.item h3{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.item p{
+  font-size: 17px;
+}
+
+.icons{
+  width: 15%;
+}
+
+
+/*------------Projects------------*/
+#project {
+  margin-top: 7%; 
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#project h1 {
+  font-size: 45px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.portfolio_card { 
+  background-color: #c65d71;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.portfolio_card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.portfolio_card img {
+  object-fit: cover;
+  height: 200px;
+  width: 370px;
+  border-radius: 1px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 27px;
+}
+
+.card-text {
+  color: #fff;
+}
+
+
+.image1, .image2, .image3 {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+
+.text1, .text2, .text3 {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+/*--------------Contact--------------*/
+#contact h2{
+  font-size: 45px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.form-label{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+
+#contact #contact-form {
+  max-width: 50rem;
+  width: 100%;
+  padding: 20px;
+  border-radius: 2rem;
+}
+
+#contact #contact-form .form-control {
+  margin-bottom: 20px;
+  background-color: #fff; 
+  border: 1px solid rgba(0, 0, 0, 0.2); 
+  color: #000; 
+}
+
+
+#contact #contact-form .btn-primary {
+  width: auto;  
+  padding: 10px 30px;  
+  background: #ab2b58;
+  border: none;
+  font-size: 16px; 
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#contact #contact-form .btn-primary:hover {
+  background: #694F8E;
+  color: #fff;
+}
+
+
+/*-------------Footer-----------------*/
+.footer{
+  width: 100vw;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: small;
+  color: #fff;
+  font-family: 'Work sans';
+}
